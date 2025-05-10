@@ -1,3 +1,7 @@
+body{
+    background-color: rgb(245, 236, 220);
+}
+
 #nav_area {border-style: 10px;
     background: lightblue;
     text-align: center;
