@@ -59,30 +59,34 @@
             </table>
         </div>
 
-        <div id="lib1">
-            <h3>In this web page there are options to Navigate using Audio!</h3>
-            <p>Ensure your Mic is enabled to be able to use this feature</p>
-            <ul>
-                <li>Navigate to a Different Page
-                    <ul>
-                        <li>Say: <b>Navigate to < page ></b>  </li>
-                    </ul>
-                </li>
+        <div id="lib">
+            <div id="lib1">
+                <h3>In this web page there are options to Navigate using Audio!</h3>
+                <p>Ensure your Mic is enabled to be able to use this feature</p>
+            </div>
+           
+            <div id="direct">
+                <ul>
+                    <li>Navigate to a Different Page
+                        <ul>
+                            <li>Say: <b>Navigate to < page ></b>  </li>
+                        </ul>
+                    </li>
 
-                <li> Generate Playlist
-                    <ul>
-                        <li>Say: <b>Generate < genre > playlist </b></li>
-                    </ul>
-                </li>
+                    <li> Generate Playlist
+                        <ul>
+                            <li>Say: <b>Generate < genre > playlist </b></li>
+                        </ul>
+                    </li>
 
-
-            </ul>  
-
+                </ul>  
+            </div>
+            <form id="buttons">
+                <button class="button-10" id="onbtn" role="button" onclick="on();return false">Turn On Listening</button>
+                <button class="button-10" id="offbtn" role="button" onclick="off(); return false">Turn Off Listening</button>
+            </form>
         </div>
-        <form id="buttons">
-            <button class="button-10" id="onbtn" role="button" onclick="on();return false">Turn On Listening</button>
-            <button class="button-10" id="offbtn" role="button" onclick="off(); return false">Turn Off Listening</button>
-        </form>
+ 
 
 
 

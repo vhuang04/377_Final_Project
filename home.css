@@ -273,13 +273,19 @@ th {
 
 #intro{
     text-align: center;
-    border-style: solid;
     width: 50%;
     display: block;
     margin-left: auto;     
     margin-right: auto;
     background-color: white;
-    border-radius: 5px;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 10px;
 }
 #button-sec {
     text-align: center; 
@@ -308,14 +314,28 @@ th {
     text-align: center;
   }
 
-  #lib1 {
-    display: block;
-    border-style: solid;
+  #lib{
+
     border-color: black;
     width: 50%;
     background-color: rgb(254, 253, 255);
-    margin:auto;
     margin-top: 50px;
     padding: 20px;
-    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+                rgba(0, 0, 0, 0.12) 0px -12px 30px,
+                rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+                rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  }
+
+  #lib1{
+    text-align: center;
+    font-family: "Poppins", sans-serif;    
+  }
+  #lib button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: block;
   }
