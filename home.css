@@ -31,7 +31,6 @@ body{
 
 }
 
-#howto
 
 #footer{
     background-color: pink;
@@ -50,7 +49,7 @@ body{
     border-style: solid;
     padding: 10px;
     background-color: white;
-    width: 80%;
+    width: 40%;
     display: none ;
     margin-left: auto;
     margin-right: auto;
@@ -108,4 +107,32 @@ th {
     display: inline-block;
     margin: 10px 5px;  
     padding: 10px 20px;
+  }
+
+  #playlist-container {
+    background-color: white;
+    border-style: solid;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    margin-top: 30px;
+
+
+  }
+
+  #dropdown{
+    text-align: center;
+  }
+
+  #lib1 {
+    display: block;
+    border-style: solid;
+    border-color: black;
+    width: 50%;
+    background-color: rgb(254, 253, 255);
+    margin:auto;
+    margin-top: 50px;
+    padding: 20px;
+    border-radius: 5px;
   }

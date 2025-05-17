@@ -5,6 +5,21 @@ function trendapi(){
         console.log(resultjson)
         const table = document.getElementById("trending-container")
         table.innerHTML=""
+
+        const songhead = document.createElement("th")
+        const artisthead = document.createElement("th") 
+        const listenerhead = document.createElement("th") 
+        const rankname = document.createElement("th") 
+
+        rankname.textContent = "Rank"
+        listenerhead.textContent = "Number of Listener"
+        artisthead.textContent = "Artist"
+        songhead.textContent = "Song"
+
+        table.appendChild(rankname)
+        table.appendChild(songhead)
+        table.appendChild(artisthead)
+        table.appendChild(listenerhead)
         document.getElementById("trending-container2").style.display = 'none'
         for(let i=0; i<10; i++){
             
@@ -56,6 +71,16 @@ function trendartist(){
 
         const tables = document.getElementById("trending-container2")
         tables.innerHTML=""
+
+        const songhead = document.createElement("th")
+        const artisthead = document.createElement("th") 
+
+
+        artisthead.textContent = "Artist"
+        songhead.textContent = "Song"
+
+        tables.appendChild(songhead)
+        tables.appendChild(artisthead)
         document.getElementById("trending-container").style.display='none'
         for(let i =0; i<20;i++){
             artistObject = resultjson.artists.artist[i]

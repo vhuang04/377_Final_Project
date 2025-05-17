@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INST377: Final Project</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+    <link rel="stylesheet" href="home.css">
+    <script defer src = "playlist.js"></script>
+    <script defer src="jsaudio.js"></script>
+</head>
+<body>
+    <div id="nav_area">
+        <ul>
+            <a href="homepage.html" id="link1" class="the-link"><li>Home</li></a>
+            <a href="playlist.html" id = "link2" class="the-link"><li>Playlist</li></a>
+            <a href="trend.html" id="link3" class="the-link"><li>Trending</li></a>
+            <a href="discover.html" id="link4" class="the-link"><li>Discover</li></a>
+            <a href="about.html" id="link5" class="the-link"><li>About</li></a>
+        </ul>
+    </div>
+    <br>
+    <div id="intro">
+        <h2> Welcome to the Playlist Page!</h2>
+        <h4>Click on the generate button to create random playlist based on the genre you selected!</h4>
+    </div>
+
+    <div id="dropdown">
+        <h3>Genre: </h3>
+        <select name="genre" id="user-input">
+            <option value="rock"> Rock</option>
+            <option value="pop">Pop</option>
+            <option value="disco">Disco</option>
+            <option value ="electronic">Electronic</option>
+            <option value="alternative">Alternative</option>
+            <option value="indie">Indie</option>
+            <option value="metal">Metal</option>
+            <option value="punk">Punk</option>
+            <option value="Hip-Hop">Hip Hop</option>
+        </select>
+        <br>
+        <br>
+        <button type="button" onclick="generate()">Generate!</button>
+
+    </div>
+    <div id="playlist-container">
+        <table>
+
+        </table>
+    </div>
+
+    <div id="lib1">
+        <h3>In this web page there are options to Navigate using Audio!</h3>
+        <p>Ensure your Mic is enabled to be able to use this feature</p>
+        <ul>
+            <li>Navigate to a Different Page
+                <ul>
+                    <li>Say: <b>Navigate to < page ></b>  </li>
+                </ul>
+            </li>
+
+            <li> Generate Playlist
+                <ul>
+                    <li>Say: <b>Generate < genre > playlist </b></li>
+                </ul>
+            </li>
+
+
+        </ul>  
+
+    </div>
+    <form id="buttons">
+        <button class="button-10" id="onbtn" role="button" onclick="on();return false">Turn On Listening</button>
+        <button class="button-10" id="offbtn" role="button" onclick="off(); return false">Turn Off Listening</button>
+    </form>
+</body>
+</html>
