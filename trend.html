@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INST377: Final Project</title>
+        <link rel="stylesheet" href="home.css">
+        <script defer src="trend.js"></script>
+        <script defer src="jsaudio.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>  
+    </head>
+    <body>
+        <h1>Playlist Generator</h1>
+        <div id="nav_area">
+            <ul>
+                <a href="homepage.html" id="link1" class="the-link"><li>Home</li></a>
+                <a href="playlist.html" id = "link2" class="the-link"><li>Playlist</li></a>
+                <a href="trend.html" id="link3" class="the-link"><li>Trending</li></a>
+                <a href="discover.html" id="link4" class="the-link"><li>Discover</li></a>
+                <a href="about.html" id="link5" class="the-link"><li>About</li></a>
+            </ul>
+        </div>
+        <br>
+        <div id="intro">
+            <h2> Welcome to the Trending Page!</h2>
+            <h4>Click on one of the buttons to see the trending charts!</h4>
+        </div>
+
+        <div id="button-sec">
+            <form method="get">
+                <button type="button" onclick="trendapi()"> Top 10 Songs </button>
+                <button type="button"  onclick="trendartist()"> Top 10 Artists</button>
+    
+            </form>
+        </div>
+
+
+
+
+
+
+
+        <div id="trending-container">
+
+            <table>
+                <tr>
+
+                </tr>
+            </table>
+
+
+        </div>
+        
+        <div id="trending-container2">
+
+            <table>
+                <tr>
+
+                </tr>
+            </table>
+
+        </div>
+
+        <div id="lib1">
+            <h3>In this web page there are options to Navigate using Audio!</h3>
+            <p>Ensure your Mic is enabled to be able to use this feature</p>
+            <ul>
+                <li>Navigate to a Different Page
+                    <ul>
+                        <li>Say: <b>Navigate to < page ></b>  </li>
+                    </ul>
+                </li>
+
+                <li> Navigate to Top 10 Songs
+                    <ul>
+                        <li>Say: <b>Navigate to Top 10 Songs </b></li>
+                        <li>Say:<b>Navigate to Top 10 Artists </b> </li>
+                    </ul>
+                </li>
+
+            </ul>  
+
+            <form id="buttons">
+                <button class="button-10" id="onbtn" role="button" onclick="on();return false">Turn On Listening</button>
+                <button class="button-10" id="offbtn" role="button" onclick="off(); return false">Turn Off Listening</button>
+            </form>
+
+        </div>
+
+    <div id="footer">
+        <h3>by: vanessa huang and patricia alday</h3>
+    </div>
+
+
+    </body>
+</html>
