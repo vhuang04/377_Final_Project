@@ -1,71 +1,61 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>INST377: Final Project</title>
-        <link rel="stylesheet" href="home.css">
-        <script src='discover.js' defer></script>
-    </head>
-    <body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>INST377: Final Project</title>
+  <link rel="stylesheet" href="home.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="discover.js" defer></script>
+  
+</head>
+<body>
 
+  <h1 id="h1">
+    <span>T</span><span>O</span><span>O</span><span>N</span><span>I</span><span>E</span>
+  </h1>
 
-        <h1 id="h1">
-            <span>T</span>
-            <span>O</span>
-            <span>O</span>
-            <span>N</span>
-            <span>I</span>
-            <span>E</span>
+  <!-- Nav Area -->
+  <div id="nav_area">
+    <ul>
+      <a href="homepage.html" class="the-link"><li>home</li></a>
+      <a href="playlist.html" class="the-link"><li>playlist</li></a>
+      <a href="trend.html" class="the-link"><li>trending</li></a>
+      <a href="discover.html" class="the-link"><li>discover</li></a>
+      <a href="about.html" class="the-link"><li>about</li></a>
+    </ul>
+  </div>
 
-        </h1>
+  <!-- Discover Section -->
+  <div class="discovercontainer">
+    <div class="discoverbox">
+      <div class="discover-box-content">
+        <h1 id="discoverForm">discover</h1>
 
-    <!-- Nav Area -->
-        <div id="nav_area">
-            <ul>
-                <a href="homepage.html" id="link1" class="the-link"><li>home</li></a>
-                <a href="playlist.html" id = "link2" class="the-link"><li>playlist</li></a>
-                <a href="trend.html" id="link3" class="the-link"><li>trending</li></a>
-                <a href="discover.html" id="link4" class="the-link"><li>discover</li></a>
-                <a href="about.html" id="link5" class="the-link"><li>about</li></a>
-            </ul>
-        </div>
-    
+        <form id="artistForm">
+          <label for="artist_fname">artist name:</label>
+          <input type="text" id="artist_fname" required />
 
-    <!-- Discover -->
+          <button type="submit" id="similarBtn">find similar artist</button>
+          <button type="submit" id="songBtn">find artist song</button>
+          <button type="button" id="clearBtn">clear field</button>
+        </form>
 
-    <div class="discovercontainer">
-        <div class="discoverbox">
-          <div class="discover-box-content">
-            <h1 id="discoverForm">discover</h1>
+        <button type="button" id="micBtn">🎤 voice search</button>
+        <span id="micStatus" style="margin-left: 10px; font-weight: bold;"></span>
 
-            
-            <form id="artistForm">
-                <label for="artist_fname">artist name:</label>
-                <input type="text" id="artist_fname" required>
-                
-                <button type="submit" name="action" value="similar">find similar artist</button>
-                <button type="submit" name="action" value="song">find artist song</button>
-                <button type="button" id="clearBtn">clear field</button>
-            </form>
-                  
-            <div id="results"></div>
-          </div>
-        </div>
+        <div id="results"></div>
+        
+        <div id="custom-cursor"></div>
+        
       </div>
-      
-
-
-
-
-
-
-
-    </body>
-
-
-    <!-- Footer -->
-    <div id="footer">
-        <h3>by: vanessa huang and patricia alday</h3>
     </div>
+  </div>
 
+  <!-- Footer -->
+  <div id="footer">
+    <h3>by: vanessa huang and patricia alday</h3>
+  </div>
+
+</body>
 </html>
-    

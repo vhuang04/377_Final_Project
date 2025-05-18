@@ -6,6 +6,7 @@
         <script defer src="trend.js"></script>
         <script defer src="jsaudio.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     </head>
     <body>
         <h1 id="h1">
@@ -28,14 +29,14 @@
         </div>
         <br>
         <div id="intro">
-            <h2> Welcome to the Trending Page!</h2>
-            <h4>Click on one of the buttons to see the trending charts!</h4>
+            <h2> welcome to the trending page!</h2>
+            <h4>click on one of the buttons to see the trending charts!</h4>
         </div>
 
         <div id="button-sec">
             <form method="get">
-                <button type="button" onclick="trendapi()"> Top 10 Songs </button>
-                <button type="button"  onclick="trendartist()"> Top 10 Artists</button>
+                <button type="button" onclick="trendapi()"> top 10 songs </button>
+                <button type="button"  onclick="trendartist()"> top 10 artists</button>
     
             </form>
         </div>
@@ -69,32 +70,34 @@
 
         <div id="lib">
             <div id="lib1">
-                <h3>In this web page there are options to Navigate using Audio!</h3>
-                <p>Ensure your Mic is enabled to be able to use this feature</p>
+                <h3>in this web page there are options to navigate using audio!</h3>
+                <p>ensure your mic is enabled to be able to use this feature</p>
             </div>
             
             <ul>
-                <li>Navigate to a Different Page
+                <li>navigate to a different page
                     <ul>
-                        <li>Say: <b>Navigate to < page ></b>  </li>
+                        <li>say: <b>navigate to < page ></b>  </li>
                     </ul>
                 </li>
 
-                <li> Navigate to Top 10 Songs
+                <li> navigate to top 10 songs
                     <ul>
-                        <li>Say: <b>Navigate to Top 10 Songs </b></li>
-                        <li>Say:<b>Navigate to Top 10 Artists </b> </li>
+                        <li>say: <b>navigate to top 10 songs </b></li>
+                        <li>say:<b>navigate to top 10 artists </b> </li>
                     </ul>
                 </li>
 
             </ul>  
 
             <form id="buttons">
-                <button class="button-10" id="onbtn" role="button" onclick="on();return false">Turn On Listening</button>
-                <button class="button-10" id="offbtn" role="button" onclick="off(); return false">Turn Off Listening</button>
+                <button class="button-10" id="onbtn" role="button" onclick="on();return false">turn on listening</button>
+                <button class="button-10" id="offbtn" role="button" onclick="off(); return false">turn off listening</button>
             </form>
 
         </div>
+
+        <div id="custom-cursor"></div>
 
     <div id="footer">
         <h3>by: vanessa huang and patricia alday</h3>
