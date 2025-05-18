@@ -3,6 +3,7 @@
     <head>
         <title>INST377: Final Project</title>
         <link rel="stylesheet" href="home.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     </head>
     <body>
         <h1 id="h1">
@@ -72,7 +73,7 @@
     </div>
 
     </div>  
-
+    <div id="custom-cursor"></div>
 
     <!-- Footer -->
     <div id="footer">
@@ -101,4 +102,25 @@
             return true;  
         }
 
+        
+        const cursor = document.getElementById("custom-cursor");
+
+document.addEventListener("mousemove", (e) => {
+  anime({
+    targets: cursor,
+    left: e.clientX - 10, // center cursor
+    top: e.clientY - 10,
+    duration: 300,
+    easing: "easeOutExpo"
+  });
+});
+
+document.addEventListener("click", () => {
+    anime({
+      targets: cursor,
+      scale: [1, 2, 1],
+      duration: 400,
+      easing: "easeOutCubic"
+    });
+  });
 </script>

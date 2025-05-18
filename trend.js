@@ -61,6 +61,28 @@ function trendapi(){
     })
 }
 
+// cursor animation
+const cursor = document.getElementById("custom-cursor");
+
+document.addEventListener("mousemove", (e) => {
+  anime({
+    targets: cursor,
+    left: e.clientX - 10, // center cursor
+    top: e.clientY - 10,
+    duration: 300,
+    easing: "easeOutExpo"
+  });
+});
+
+document.addEventListener("click", () => {
+    anime({
+      targets: cursor,
+      scale: [1, 2, 1],
+      duration: 400,
+      easing: "easeOutCubic"
+    });
+  });
+  
 
 function trendartist(){
     fetch('http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=04082a95d3d42a143f5505cb89aebba0&format=json')
