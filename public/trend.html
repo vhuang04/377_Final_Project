@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INST377: Final Project</title>
+        <link rel="stylesheet" href="home.css">
+        <script defer src="trend.js"></script>
+        <script defer src="jsaudio.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>  
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    </head>
+    <body>
+        <h1 id="h1">
+            <span>T</span>
+            <span>O</span>
+            <span>O</span>
+            <span>N</span>
+            <span>I</span>
+            <span>E</span>
+
+          </h1>
+        <div id="nav_area">
+            <ul>
+                <a href="homepage.html" id="link1" class="the-link"><li>home</li></a>
+              <a href="playlist.html" id = "link2" class="the-link"><li>playlist</li></a>
+              <a href="trend.html" id="link3" class="the-link"><li>trending</li></a>
+              <a href="discover.html" id="link4" class="the-link"><li>discover</li></a>
+              <a href="about.html" id="link5" class="the-link"><li>about</li></a>
+              <a href="saved.html" id="link6" class="the-link"><li>saved playlist</li></a>
+            </ul>
+        </div>
+        <br>
+        <div id="intro">
+            <h2> welcome to the trending page!</h2>
+            <h4>click on one of the buttons to see the trending charts!</h4>
+        </div>
+
+        <div id="button-sec">
+            <form method="get">
+                <button type="button" onclick="trendapi()"> top 10 songs </button>
+                <button type="button"  onclick="trendartist()"> top 10 artists</button>
+    
+            </form>
+        </div>
+
+
+
+
+
+
+
+        <div id="trending-container">
+
+            <table>
+                <tr>
+
+                </tr>
+            </table>
+
+
+        </div>
+        
+        <div id="trending-container2">
+
+            <table>
+                <tr>
+
+                </tr>
+            </table>
+
+        </div>
+
+        <div id="lib">
+            <div id="lib1">
+                <h3>in this web page there are options to navigate using audio!</h3>
+                <p>ensure your mic is enabled to be able to use this feature</p>
+            </div>
+            
+            <ul>
+                <li>navigate to a different page
+                    <ul>
+                        <li>say: <b>navigate to < page ></b>  </li>
+                    </ul>
+                </li>
+
+                <li> navigate to top 10 songs
+                    <ul>
+                        <li>say: <b>navigate to top 10 songs </b></li>
+                        <li>say:<b>navigate to top 10 artists </b> </li>
+                    </ul>
+                </li>
+
+            </ul>  
+
+            <form id="buttons">
+                <button class="button-10" id="onbtn" role="button" onclick="on();return false">turn on listening</button>
+                <button class="button-10" id="offbtn" role="button" onclick="off(); return false">turn off listening</button>
+            </form>
+
+        </div>
+
+        <div id="custom-cursor"></div>
+
+    <div id="footer">
+        <h3>by: vanessa huang and patricia alday</h3>
+    </div>
+
+
+    </body>
+</html>

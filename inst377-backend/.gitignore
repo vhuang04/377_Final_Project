@@ -1,0 +1,15 @@
+# Ignore environment variables
+.env
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+
+# VSCode settings
+.vscode/
+
+# Optional: Ignore local build/output
+dist/
+build/

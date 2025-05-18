@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>INST377: Final Project</title>
+        <link rel="stylesheet" href="home.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    </head>
+    <body>
+        <div id="custom-cursor"></div>
+
+        <h1 id="h1">
+            <span>T</span>
+            <span>O</span>
+            <span>O</span>
+            <span>N</span>
+            <span>I</span>
+            <span>E</span>
+
+          </h1>
+
+        <div id="nav_area">
+            <ul>
+              <a href="homepage.html" id="link1" class="the-link"><li>home</li></a>
+              <a href="playlist.html" id = "link2" class="the-link"><li>playlist</li></a>
+              <a href="trend.html" id="link3" class="the-link"><li>trending</li></a>
+              <a href="discover.html" id="link4" class="the-link"><li>discover</li></a>
+              <a href="about.html" id="link5" class="the-link"><li>about</li></a>
+              <a href="saved.html" id="link6" class="the-link"><li>saved playlist</li></a>
+            </ul>
+        </div>
+
+        <div id="howto">
+            <h2>how to use: </h2>
+            <p style="font-size: 20px;">hello welcome to our playlist generator! navigate the website through the different tabs above me!</p>
+            <h4>to use annyang:</h4>
+
+            <ul>
+                <li>say: <b>navigate to 'page'</b></li>
+            </ul>
+
+        </div>
+
+        <div id="custom-cursor"></div>
+
+        <div id="footer">
+            <h3>by: vanessa huang and patricia alday</h3>
+        </div>
+
+
+
+    </body>
+</html>
+
+<script>
+    const cursor = document.getElementById("custom-cursor");
+
+document.addEventListener("mousemove", (e) => {
+  anime({
+    targets: cursor,
+    left: e.clientX - 10, // center cursor
+    top: e.clientY - 10,
+    duration: 300,
+    easing: "easeOutExpo"
+  });
+});
+
+document.addEventListener("click", () => {
+    anime({
+      targets: cursor,
+      scale: [1, 2, 1],
+      duration: 400,
+      easing: "easeOutCubic"
+    });
+  });
+</script>
