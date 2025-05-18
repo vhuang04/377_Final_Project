@@ -1,3 +1,5 @@
+let currentPlaylist = []
+
 async function playlist(tag){
     return await fetch (`https://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=${tag}&api_key=04082a95d3d42a143f5505cb89aebba0&format=json`)
         .then((result)=> result.json())
@@ -7,8 +9,9 @@ async function playlist(tag){
         })
 }
 // cursor animation
-const cursor = document.getElementById("custom-cursor");
 
+
+const cursor = document.getElementById("custom-cursor");
 document.addEventListener("mousemove", (e) => {
   anime({
     targets: cursor,
@@ -61,7 +64,7 @@ async function generate(){
         [playlistSong[i], playlistSong[randomIndex]] = [playlistSong[randomIndex], playlistSong[i]];
     }
 
-
+    currentPlaylist = [];
     for(let i = 0; i<20; i++){
         track = playlistSong[i]
         const rowtable = document.createElement('tr')
@@ -79,9 +82,28 @@ async function generate(){
         rowtable.appendChild(artist)
         table.appendChild(rowtable)
 
+        currentPlaylist.push({
+            song: track.name,
+            artist: track.artist.name
+        });
+
         table.style.display = "block"
 
-    }
-
-    
+    }}
+  
+async function savePlaylist(){
+    await fetch('/customer',{
+        method:'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+            songs: currentPlaylist
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("playlist saved", data)
+    })
 }
+
+
+

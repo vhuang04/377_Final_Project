@@ -35,6 +35,7 @@ app.post('/customer', async (req, res) => {
 
     console.log('Song:', firstName);
     console.log('Artist:', lastName);
+    
 
     const { data, error } = await supabase
         .from('customer')
